@@ -1,0 +1,42 @@
+# UK Biobank data files
+*.bgen
+*.bgi
+*.sample
+*.pgen
+*.pvar
+*.psam
+*.bed
+*.bim
+*.fam
+
+# Analysis results/outputs
+*.csv
+*.tsv
+*.txt
+*.log
+*.snplist
+*.phe
+results_*
+
+# Participant identifiers
+*eid*
+*participant*
+*sample_ids*
+
+# PLINK2 executable
+plink2
+plink2_linux_avx2_*.zip
+
+# dxCompiler
+dxCompiler-*.jar
+
+# JSON configurations
+*_input.json
+*_input.dx.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
