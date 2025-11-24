@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository contains analysis pipelines for identifying genetic variants associated with systemic lupus erythematosus (SLE) using UK Biobank whole-exome and whole-genome sequencing data (~500,000 samples). The project comprises two main analyses:
+This repository contains analysis pipelines for identifying genetic variants associated with systemic lupus erythematosus (SLE) using UK Biobank whole-exome and whole-genome sequencing data (~500,000 samples). The project currently comprises the following analyses:
 
 1. Genome-wide association study (GWAS) on whole-exome sequencing (WES) data using REGENIE
 2. Targeted association analysis of the IRF5 locus using whole-genome sequencing (WGS) data
