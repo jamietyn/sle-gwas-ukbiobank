@@ -4,14 +4,14 @@
 
 This repository contains analysis pipelines for identifying genetic variants associated with systemic lupus erythematosus (SLE) using UK Biobank whole-exome and whole-genome sequencing data (~500,000 samples). The project comprises two main analyses:
 
-1. **Genome-wide association study (GWAS)** on whole-exome sequencing (WES) data using REGENIE
-2. **Targeted association analysis of the IRF5 locus** using whole-genome sequencing (WGS) data
+1. Genome-wide association study (GWAS) on whole-exome sequencing (WES) data using REGENIE
+2. Targeted association analysis of the IRF5 locus using whole-genome sequencing (WGS) data
 
 ### **Data Sources**
 
-- **UK Biobank WGS Data**: DRAGEN population-level WGS variants (500k release)
-- **Phenotype Data**: UK Biobank primary care and hospital episode statistics (ICD-10 codes)
-- **Genomic Coordinates**: GRCh38/hg38 reference genome
+- UK Biobank WGS Data: DRAGEN population-level WGS variants (500k release)
+- Phenotype Data: UK Biobank primary care and hospital episode statistics (ICD-10 codes)
+- Genomic Coordinates: GRCh38/hg38 reference genome
 
 ## **Workflow Overview**
 
@@ -38,29 +38,26 @@ This repository contains analysis pipelines for identifying genetic variants ass
 ## Repository Structure
 ```
 SLE-GWAS-UKBIOBANK/
-│
 ├── 01_sample_phenotype_qc/
-│   └── sample_phenotype_qc.ipynb          # Sample QC and phenotype preparation
-│
+│   └── sample_phenotype_qc.ipynb
 ├── 02_variant_qc/
-│   ├── count_variants.sh                   # Count variants per chromosome
-│   ├── generate_wes_qc_json.ipynb          # Generate WES QC configuration
-│   └── run_wes_qc.sh                       # Run variant QC pipeline
-│
+│   ├── count_variants.sh
+│   ├── generate_wes_qc_json.ipynb
+│   └── run_wes_qc.sh
 ├── 03_gwas/
-│   └── regenie_gwas.md                     # GWAS analysis using REGENIE
-│
+│   └── regenie_gwas.md
 ├── 04_irf5_analysis/
-│   └── irf5_sle_association_analysis.ipynb # IRF5 region association analysis
-│
-└── README.md                               # This file
+│   └── irf5_sle_association_analysis.ipynb
+├── .gitignore
+└── README.md
 ```
 
 ## Data Confidentiality & Repository Management
-**This repository follows UK Biobank Repository Management Best Practices for Sensitive Data.**
+This repository follows UK Biobank Repository Management Best Practices for Sensitive Data.
 Sensitive data files (participant data/identifiers, genetic data files) are not included in this repository due to UK Biobank data access restrictions. All data files are stored outside the repository directory on the UK Biobank Research Analysis Platform, and all analysis was conducted on the Platform under approved project access. Generated results and outputs are also excluded (see `.gitignore`).
 
 **Reference:** [UK Biobank Repository Management Best Practices](https://community.ukbiobank.ac.uk/hc/en-gb/articles/31205342500253)
+
 ## Usage
 
 All notebooks should be run in JupyterLab on the UK Biobank Research Analysis Platform, and all scripts can be run via command line connected to UK Biobank RAP.
